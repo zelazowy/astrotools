@@ -57,6 +57,7 @@ struct ContentView: View {
     @State private var circleRadii: [CGFloat] = [72, 132, 192]
     @State private var isControlPanelVisible = false
     @State private var isAboutVisible = false
+    @State private var isFlatPanelInterfaceHidden = false
     @State private var controlsOffset: CGSize = .zero
     @State private var controlsDragStartOffset: CGSize?
     @State private var flatBrightness = 0.7
@@ -84,12 +85,14 @@ struct ContentView: View {
         }
         .background(Color.black)
         .overlay(alignment: .bottom) {
-            bottomBar
-                .padding(.horizontal, 16)
-                .padding(.bottom, 24)
+            if !shouldHideBottomBar {
+                bottomBar
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 24)
+            }
         }
         .overlay {
-            if isControlPanelVisible {
+            if isControlPanelVisible, !shouldHideControlsOverlay {
                 controlsOverlay
             }
         }
@@ -105,6 +108,7 @@ struct ContentView: View {
         }
         .onChange(of: selectedTool) { _, _ in
             isControlPanelVisible = false
+            isFlatPanelInterfaceHidden = false
             controlsOffset = .zero
             controlsDragStartOffset = nil
             updateActiveTool()
@@ -141,7 +145,9 @@ struct ContentView: View {
         } message: {
             Text("Newtonian Collimator\n\nCurrent tools:\n• Collimation helper\n• Flat panel for capturing flats")
         }
+        .statusBar(hidden: selectedTool == .flatPanel && isFlatPanelInterfaceHidden)
         .animation(.easeInOut(duration: 0.2), value: isControlPanelVisible)
+        .animation(.easeInOut(duration: 0.2), value: isFlatPanelInterfaceHidden)
     }
 
     private var permissionCard: some View {
@@ -283,6 +289,10 @@ struct ContentView: View {
     private var flatPanelView: some View {
         flatColor
             .ignoresSafeArea()
+            .contentShape(Rectangle())
+            .onTapGesture {
+                toggleFlatPanelInterface()
+            }
     }
 
     private var flatColor: Color {
@@ -296,6 +306,14 @@ struct ContentView: View {
         case .warmWhite:
             return Color(red: 1.0, green: 0.96, blue: 0.88)
         }
+    }
+
+    private var shouldHideBottomBar: Bool {
+        selectedTool == .flatPanel && isFlatPanelInterfaceHidden
+    }
+
+    private var shouldHideControlsOverlay: Bool {
+        selectedTool == .flatPanel && isFlatPanelInterfaceHidden
     }
 
     private func updateActiveTool() {
@@ -313,6 +331,19 @@ struct ContentView: View {
             screenBrightnessController.activate(brightness: flatBrightness)
         } else {
             screenBrightnessController.deactivate()
+        }
+    }
+
+    private func toggleFlatPanelInterface(forceHidden: Bool? = nil) {
+        guard selectedTool == .flatPanel else {
+            return
+        }
+
+        let nextValue = forceHidden ?? !isFlatPanelInterfaceHidden
+        isFlatPanelInterfaceHidden = nextValue
+
+        if nextValue {
+            isControlPanelVisible = false
         }
     }
 }
