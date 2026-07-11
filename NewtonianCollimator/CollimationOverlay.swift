@@ -4,6 +4,7 @@ struct CollimationOverlay: View {
     let circleRadii: [CGFloat]
     let lineWidth: CGFloat
     let overlayOpacity: Double
+    let overlayColor: Color
     @Binding var centerOffset: CGSize
 
     @State private var dragStartOffset: CGSize?
@@ -36,14 +37,14 @@ struct CollimationOverlay: View {
 
                 context.stroke(
                     overlayPath,
-                    with: .color(.green.opacity(overlayOpacity)),
+                    with: .color(overlayColor.opacity(overlayOpacity)),
                     style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round)
                 )
 
                 let centerMarker = Path(
                     ellipseIn: CGRect(x: center.x - 7, y: center.y - 7, width: 14, height: 14)
                 )
-                context.fill(centerMarker, with: .color(.green.opacity(min(1, overlayOpacity + 0.15))))
+                context.fill(centerMarker, with: .color(overlayColor.opacity(min(1, overlayOpacity + 0.15))))
             }
             .contentShape(Rectangle())
             .gesture(

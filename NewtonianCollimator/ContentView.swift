@@ -1,5 +1,12 @@
 import SwiftUI
 
+private extension Color {
+    static let astroGold = Color(red: 0.949, green: 0.725, blue: 0.286)
+    static let astroBlue = Color(red: 0.286, green: 0.443, blue: 0.643)
+    static let astroInk = Color(red: 0.102, green: 0.129, blue: 0.184)
+    static let astroPanel = Color(red: 0.145, green: 0.168, blue: 0.227)
+}
+
 struct ContentView: View {
     private enum AstroTool: String, CaseIterable, Identifiable {
         case collimation
@@ -77,6 +84,7 @@ struct ContentView: View {
                     circleRadii: circleRadii,
                     lineWidth: 3,
                     overlayOpacity: 0.95,
+                    overlayColor: .astroGold,
                     centerOffset: $centerOffset
                 )
             } else {
@@ -160,7 +168,8 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
-        .background(.black.opacity(0.72), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .foregroundStyle(.white)
+        .background(Color.astroInk.opacity(0.88), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
     }
 
     private var controlPanel: some View {
@@ -196,11 +205,17 @@ struct ContentView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                .tint(.astroGold)
             }
         }
         .padding(16)
-        .background(.black.opacity(0.72), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .foregroundStyle(.white)
+        .background(Color.astroPanel.opacity(0.94), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
         .frame(width: 310)
+        .overlay(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .stroke(Color.astroGold.opacity(0.18), lineWidth: 1)
+        )
     }
 
     private var controlsOverlay: some View {
@@ -239,7 +254,8 @@ struct ContentView: View {
                 isAboutVisible = true
             }
             .buttonStyle(.bordered)
-            .tint(.white)
+            .tint(.astroBlue)
+            .foregroundStyle(.white)
 
             Spacer()
 
@@ -256,7 +272,8 @@ struct ContentView: View {
                     .font(.subheadline.weight(.semibold))
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
-                    .background(.black.opacity(0.55), in: Capsule())
+                    .foregroundStyle(.white)
+                    .background(Color.astroBlue.opacity(0.35), in: Capsule())
             }
             .tint(.white)
 
@@ -271,12 +288,17 @@ struct ContentView: View {
                     .frame(width: 52, height: 52)
             }
             .buttonStyle(.borderedProminent)
-            .tint(.green)
+            .tint(.astroGold)
+            .foregroundStyle(Color.astroInk)
             .clipShape(Circle())
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
-        .background(.black.opacity(0.42), in: Capsule())
+        .background(Color.astroInk.opacity(0.54), in: Capsule())
+        .overlay(
+            Capsule()
+                .stroke(Color.astroGold.opacity(0.15), lineWidth: 1)
+        )
     }
 
     private func radiusBinding(for index: Int) -> Binding<Double> {
@@ -364,9 +386,10 @@ private struct LabeledSlider: View {
                     .monospacedDigit()
             }
             .font(.subheadline)
+            .foregroundStyle(.white)
 
             Slider(value: $value, in: range)
-                .tint(.green)
+                .tint(.astroGold)
         }
     }
 }
