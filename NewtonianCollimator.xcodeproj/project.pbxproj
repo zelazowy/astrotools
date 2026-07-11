@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A9D0D602CC0001000000001 /* CollimationAidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D0D602CC0002000000001 /* CollimationAidApp.swift */; };
+		8A9D0D602CC0001000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D0D602CC0002000000002 /* ContentView.swift */; };
+		8A9D0D602CC0001000000003 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D0D602CC0002000000003 /* CameraManager.swift */; };
+		8A9D0D602CC0001000000004 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D0D602CC0002000000004 /* CameraPreview.swift */; };
+		8A9D0D602CC0001000000005 /* CollimationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D0D602CC0002000000005 /* CollimationOverlay.swift */; };
+		8A9D0D602CC0001000000006 /* ScreenBrightnessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D0D602CC0002000000007 /* ScreenBrightnessController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A9D0D602CC0002000000001 /* CollimationAidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollimationAidApp.swift; sourceTree = "<group>"; };
+		8A9D0D602CC0002000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A9D0D602CC0002000000003 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		8A9D0D602CC0002000000004 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		8A9D0D602CC0002000000005 /* CollimationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollimationOverlay.swift; sourceTree = "<group>"; };
+		8A9D0D602CC0002000000006 /* NewtonianCollimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewtonianCollimator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9D0D602CC0002000000007 /* ScreenBrightnessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A9D0D602CC0003000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A9D0D602CC0004000000001 = {
+			isa = PBXGroup;
+			children = (
+				8A9D0D602CC0004000000002 /* NewtonianCollimator */,
+				8A9D0D602CC0004000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A9D0D602CC0004000000002 /* NewtonianCollimator */ = {
+			isa = PBXGroup;
+			children = (
+				8A9D0D602CC0002000000001 /* CollimationAidApp.swift */,
+				8A9D0D602CC0002000000002 /* ContentView.swift */,
+				8A9D0D602CC0002000000003 /* CameraManager.swift */,
+				8A9D0D602CC0002000000004 /* CameraPreview.swift */,
+				8A9D0D602CC0002000000005 /* CollimationOverlay.swift */,
+				8A9D0D602CC0002000000007 /* ScreenBrightnessController.swift */,
+			);
+			path = NewtonianCollimator;
+			sourceTree = "<group>";
+		};
+		8A9D0D602CC0004000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A9D0D602CC0002000000006 /* NewtonianCollimator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A9D0D602CC0005000000001 /* NewtonianCollimator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9D0D602CC0008000000002 /* Build configuration list for PBXNativeTarget "NewtonianCollimator" */;
+			buildPhases = (
+				8A9D0D602CC0003000000002 /* Sources */,
+				8A9D0D602CC0003000000001 /* Frameworks */,
+				8A9D0D602CC0003000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewtonianCollimator;
+			productName = NewtonianCollimator;
+			productReference = 8A9D0D602CC0002000000006 /* NewtonianCollimator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A9D0D602CC0006000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					8A9D0D602CC0005000000001 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 8A9D0D602CC0008000000001 /* Build configuration list for PBXProject "NewtonianCollimator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A9D0D602CC0004000000001;
+			productRefGroup = 8A9D0D602CC0004000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A9D0D602CC0005000000001 /* NewtonianCollimator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A9D0D602CC0003000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A9D0D602CC0003000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9D0D602CC0001000000003 /* CameraManager.swift in Sources */,
+				8A9D0D602CC0001000000004 /* CameraPreview.swift in Sources */,
+				8A9D0D602CC0001000000001 /* CollimationAidApp.swift in Sources */,
+				8A9D0D602CC0001000000005 /* CollimationOverlay.swift in Sources */,
+				8A9D0D602CC0001000000006 /* ScreenBrightnessController.swift in Sources */,
+				8A9D0D602CC0001000000002 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A9D0D602CC0007000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SQACYRQ4JA;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A9D0D602CC0007000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SQACYRQ4JA;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8A9D0D602CC0007000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to align the telescope optics with an overlay.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.NewtonianCollimator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8A9D0D602CC0007000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to align the telescope optics with an overlay.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.NewtonianCollimator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A9D0D602CC0008000000001 /* Build configuration list for PBXProject "NewtonianCollimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9D0D602CC0007000000001 /* Debug */,
+				8A9D0D602CC0007000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A9D0D602CC0008000000002 /* Build configuration list for PBXNativeTarget "NewtonianCollimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9D0D602CC0007000000003 /* Debug */,
+				8A9D0D602CC0007000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A9D0D602CC0006000000001 /* Project object */;
+}

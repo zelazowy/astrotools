@@ -1,0 +1,13 @@
+.DS_Store
+
+work/
+outputs/
+build/
+DerivedData/
+
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+xcuserdata/
+*.xcworkspace/xcuserdata/
